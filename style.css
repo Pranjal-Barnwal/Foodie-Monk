@@ -1,0 +1,353 @@
+/* CSS Reset */
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    /* smooth scrolling */
+}
+
+*::before{
+    content: "";
+    background-color: black;
+    z-index: 0;
+}
+
+body{
+    background-color: rgb(255, 208, 127);
+    z-index: -100;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    /* background-color: darkslategray; */
+    display: flex;
+    align-items: center;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.829);
+    top: 0;
+    left: 0;
+}
+
+/* done by Harry, no need for me with position sticky and setting opacity of navbar */
+/* 
+#navbar::before{
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.9;
+} */
+
+/* Navigation Bar: Logo & Image */
+#navbar img{
+    border-radius: 80px;
+    height: 90px;
+    margin: 5px 15px;
+    box-shadow: 1px 1px 10px rgba(220, 20, 60, 0.76), -1px -1px 10px rgba(255, 166, 0, 0.753);
+    transition: box-shadow 0.4s ease-in 0.1s;
+}
+
+#navbar img:hover{
+    box-shadow: 1px 1px 15px rgba(220, 20, 60, 0.871), -1px -1px 15px rgba(255, 166, 0, 0.826), 1px 1px 15px rgba(220, 20, 60, 0.871), -1px -1px 15px rgba(255, 166, 0, 0.862);
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul{
+    left: 20%;
+    display: flex;
+    list-style: none;
+    /* opacity: 0.5; */
+    width: 100%;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+}
+#navbar ul li a{
+    font-size: 20px;
+    display: block;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out 0.2s;
+}
+#navbar ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.308);
+    color: rgb(255, 198, 74);   
+    text-shadow: 1px 1px 5px crimson, 1px 1px 2px black;
+}
+
+
+
+/* #HOME Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 2px 6% 60px 6%;
+    align-items: center;
+    text-align: center;
+    top: 80px;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 20px;
+    margin: 6% 13%;    
+    box-shadow: inset -9px -9px 25px black;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    /* background: url(./Resources/mainBG.jpg) center center cover no-repeat; */
+    background: url(./Resources/mainBG.jpg) no-repeat center center/cover;
+    top: 0px;
+    height: 120%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.999;
+}
+
+#home h1{
+    color: white;
+    margin-bottom: 10%;
+    font-family: 'Baloo Bhai 2', cursive;
+    text-shadow: 1px 1px 2px orange;
+}
+
+#home p{
+    color: white;
+    font-family: cursive;
+    font-size: larger;
+    text-shadow: 2px 2px 2px black;
+}
+
+.gradient{
+    text-shadow: 2px 2px 15px rgba(220, 20, 60, 0.863), -2px -2px 5px rgba(255, 217, 0, 0.815), 3px 3px 10px black, -3px -3px 10px black;
+}
+
+
+
+/* SERVICES Section */
+#services-container{
+    background: url(Resources/bgVec.png) no-repeat center center/cover;
+    z-index: 1;
+}
+#services{
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#services .box{
+    border: 6px solid rgb(207, 28, 64);
+    background-color: rgb(253, 201, 105);
+    border-radius: 20px;
+    margin: 1%;
+    width: 24%;
+    padding: 30px;
+    box-shadow: inset 22px 22px 40px crimson, inset -22px -22px 40px rgb(201, 11, 11);
+    margin-bottom: 60px;
+}
+
+.box img{
+    display: block;    
+    margin: 10px auto;
+    margin-bottom: 5px;
+    /* height: 200px; */
+    width: 70%;
+}
+
+
+
+/* Utility Classes */
+.h-primary{
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.h-secondary{
+    font-size: 30px;
+    padding: 12px;
+    font-family: cursive;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.btn{
+    margin-top: 40px;    
+    padding: 5px 20px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: 900;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #ffc83c;
+    color: rgb(255, 0, 51);
+    border: 4px solid rgb(255, 0, 51);
+    transition: all 0.4s ease-in-out 0.1s;
+}   
+
+.btn:hover{
+    color: red;
+    border-color: red;
+    text-shadow: 2px 2px 2px white, 1px 1px 1px black;
+    cursor: pointer;
+    box-shadow: 3px 3px 15px brown, -2px -2px 10px orange;
+}
+
+
+.box .center{
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+/* Clients Section */
+#client-section{
+    /* height: 470px; */
+    background: url(Resources/restro.jpg) no-repeat center center/cover;
+    z-index: -3;
+    padding: 20px;
+}
+#client-section .h-primary{
+    /* margin: 100px; */
+    padding: 50px 10px 30px 10px;
+    color: white;
+    z-index: -2;
+}
+
+.black-layer{
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.815);
+    /* height: 470px; */
+    z-index: -1;
+}
+
+#clients{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-item img{
+    margin: 40px;
+    width: 125px;
+    height: 125px;
+}
+
+
+
+/* CONTACT Section */
+#contact{
+    background: url(Resources/customerCare.jpg) no-repeat center center/cover;
+}
+
+#contact .center{
+    color: white;
+    margin-bottom: 15%;
+    text-shadow: 2px 2px 10px black, -2px -2px 10px black;
+}
+
+.contactBGFilter{
+    background-color: rgba(0, 0, 0, 0.562);
+}
+
+#contact form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 34px; */
+    width: 100%;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;    
+    width: 40%;
+}
+.form-group input, .form-group textarea{
+    color: black;
+    padding: 0px 20px;
+    margin-left: 13px;
+    width: 100%;
+    height: 30px;
+    border-radius: 12px;    
+    background-color: rgba(255, 255, 255, 0.36);
+    border: 2px solid black;
+}
+.form-group textarea{
+    height: 60px;    
+    padding: 10px 20px;
+}
+.form-group input::placeholder, .form-group textarea::placeholder{
+    color: rgb(12, 44, 44);
+}
+
+form .btn{
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    border-color: white;
+    transition: all 0.5s ease-in-out 0s;
+}
+form .btn:hover{
+    color: black;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.274);
+    box-shadow: 2px 2px 10px black, -2px -2px 10px black, inset 2px 2px 20px black, inset -2px -2px 20px black;
+}
+
+
+/* About section */
+#about{
+    margin-top: 200px;
+}
+#about .center{
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.596);
+    padding: 10%;
+    border-radius: 20px;
+    width: 40%;
+    margin: 0% 20%;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.social-links img{
+    width: 40px;
+    margin: 10px 10px;
+    border-radius: 400px;
+    transition: box-shadow 0.2s ease-in-out 0.05s;
+}
+.social-links img:hover{
+    box-shadow: 2px 2px 10px crimson, -2px -2px 10px gold;
+}
+
+.ruler{
+    width: 40%;
+    margin: 3% 0;
+    margin-left: 30%;
+}
